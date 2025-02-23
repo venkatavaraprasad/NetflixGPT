@@ -22,7 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 
     
     useEffect(()=>{
-        getbackgroundvideo();
+      (!trailervideo)&&getbackgroundvideo();
 
       },[]);
 }

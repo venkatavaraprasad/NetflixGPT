@@ -18,7 +18,7 @@ const Browser = () => {
 
   
   return (
-    <div>
+    <div >
        
       { (showgptsearch)?<GPTsearch/>:
        <>

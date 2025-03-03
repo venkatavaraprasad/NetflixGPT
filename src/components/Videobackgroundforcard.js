@@ -9,10 +9,10 @@ const Videobackgroundforcard = () => {
   if (!moviebackground) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-black   bg-opacity-50 flex items-center justify-center z-50 animate-fadeIn ">
+    <div className="absolute top-0 left-0 w-screen h-screen bg-black  md:bg-opacity-50 flex items-center justify-center z-50 animate-fadeIn ">
       
       <iframe
-        className="w-9/12 md:w-3/4 lg:w-1/2 aspect-video rounded-lg shadow-lg"
+        className="w-[80%] h-[80%] md:w-3/4 lg:w-[65%] aspect-video rounded-lg shadow-lg"
         src={`https://www.youtube.com/embed/${moviebackground.key}?autoplay=1&mute=0`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"

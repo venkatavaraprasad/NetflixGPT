@@ -29,6 +29,11 @@ const Header = () => {
   const handlechange=(e)=>{
     dispatch(changelanguage(e.target.value))
   }
+  const handlegptsearch=()=>{
+    dispatch(toggelgptsearch());
+    (!showgptsearch)?navigate('/GPTsearch'):navigate('/browser');
+
+  }
    useEffect(()=>{
         
         const unsubcribe=onAuthStateChanged(auth, (user) => {
@@ -52,14 +57,15 @@ const Header = () => {
   return (
     <div className='absolute flex flex-col md:flex-row justify-between h-16 w-screen bg-gradient-to-b from-black to-transparent z-20'>
       <div className='w-auto'>  
-        <img className="mx-auto md:mx-10 w-48 z-10"src={header_img} alt="logoimage" onClick={()=>navigate("/browser")}/></div>
+        <img className="mx-auto md:mx-10 w-48 z-10"src={header_img} alt="logoimage" />
+      </div>
         
         {user &&
           <div className='flex justify-between mx-10'>
-               <select  className=' m-3 p-2 bg-black border-2 text-white rounded-md' onChange={handlechange}>
+               <select  className=' m-3 p-2 py-1 bg-black border-2 text-white rounded-md' onChange={handlechange}>
                 { supported_lan.map(x=><option key={x.Identifier} value={x.Identifier}>{x.name}</option>)}
                </select>
-              <button className='h-8 px-2 p-1 mt-5 rounded-md bg-purple-700 text-white' onClick={()=>dispatch(toggelgptsearch()) }>{(showgptsearch)? "HomePage" :"GPTSearch"}</button>
+              <button className='h-8 px-2 p-1 mt-5 rounded-md bg-purple-700 text-white' onClick={handlegptsearch }>{(showgptsearch)? "Home Page" :"GPTSearch"}</button>
               <img  className="hidden md:block p-3 h-16 rounded-2xl"src={user?.photoURL} alt="user_image" /> 
               <button className='h-4 mt-2 pt-4 text-white'onClick={handleclick}>sign out</button>
           

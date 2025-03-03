@@ -5,6 +5,7 @@ import Browser from "./Browser";
 import Moviedetails from "./Moviedetails";
 
 import Layout from "./Layout"; // Import the new Layout component
+import GPTsearch from "./GPTsearch";
 
 const approter = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const approter = createBrowserRouter([
         path: "movie/:movieid", 
         element: <Moviedetails />,
     },
+    {
+      path: "/GPTsearch", 
+      element: <GPTsearch/>,
+    },
     ],
   },
 ]);
@@ -30,6 +35,7 @@ const approter = createBrowserRouter([
 const Body = () => {
   return (
     <div>
+      
       <RouterProvider router={approter} />
     </div>
   );

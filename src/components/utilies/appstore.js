@@ -3,6 +3,7 @@ import  userReducer  from "./userslice";
 import movieReducer from "./movieslistslice";
 import GPTReducer from "./GPTslice";
 import LanguageReducer from "./Languageslice";
+import MoviedetailsReducer from "./Moviedetailsslice";
 
 
 const appstore=configureStore({
@@ -11,6 +12,7 @@ const appstore=configureStore({
         movies:movieReducer,
         GPTsearch:GPTReducer,
         Language:LanguageReducer,
+        Moviedetails:MoviedetailsReducer
 
 
     },

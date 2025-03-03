@@ -1,6 +1,6 @@
 const Shimmer = () => {
     return (
-      <div className="w-full bg-black h-96 mx-20 flex  overflow-hidden animate-pulse flex-col md:flex-row  md:items-center justify-center">
+      <div className="w-full bg-black h-96  flex  overflow-hidden animate-pulse flex-col md:flex-row  md:items-center justify-center">
         <div className="w-56 h-72 mr-4 mb-2"  key={1}>
             <div className="w-[85%] h-52 m-auto my-4 rounded-sm bg-gray-700"></div>
             <div className="w-[85%] h-2 m-auto my-4 rounded-sm bg-gray-700"></div>

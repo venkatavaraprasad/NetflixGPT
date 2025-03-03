@@ -6,7 +6,7 @@ const Secondcontainer = () => {
 
   return (
     movies &&
-    <div className='bg-black'>
+    <div className='bg-black  w-screen'>
       <div className='mt-0 md:-mt-44 pl-8 relative z-20'>
       <Movielist title={"Now playing"} movies={movies.nowplayingmovies} />
       <Movielist title={"Popular"} movies={movies.popularmovies} />

@@ -20,7 +20,7 @@ const Browser = () => {
   return (
     <div >
        
-      { (showgptsearch)?<GPTsearch/>:
+      {
        <>
           <Maincontainer/>
           <Secondcontainer/>

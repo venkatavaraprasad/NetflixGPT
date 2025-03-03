@@ -3,9 +3,9 @@ const Movielist=({title,movies})=>{
 
    
     return ( 
-         <div className="px-2" >
+         <div className="px-2 " >
 
-            <h1 className="text-xs md:text-2xl text-white  font-bold">{title}</h1>
+            <h1 className="text-xs md:text-2xl text-white  font-bold w-full">{title}</h1>
             <div className="flex overflow-x-scroll no-scrollbar pt-4  mb-3">
 
                 
